@@ -4,6 +4,7 @@ import "./App.css";
 import Container from "./components/Container";
 import Teacher from "./components/Teacher";
 import Status from "./components/Status";
+import StatusContainer from "./components/StatusContainer";
 
 const App: React.FC = () => {
   const teacherList = [
@@ -31,6 +32,8 @@ const App: React.FC = () => {
       <i>
         <Teacher teacherList={teacherList} />
       </i>
+      <br />
+      <StatusContainer > This is a container</StatusContainer>
     </div>
   );
 };
