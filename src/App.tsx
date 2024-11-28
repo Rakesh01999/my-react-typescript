@@ -23,7 +23,8 @@ const App: React.FC = () => {
   return (
     // <div className="App">App</div>
     <div className="App">
-      <Status status="Success" data="Rakesh" />
+      {/* <Status status="Success" data="Rakesh" /> */}
+      <Status status="Success" />
       <Container name="Rakesh Biswas" message={15} isLogged={true} />
       <br />
       <h1>Your Teacher's Name :</h1>

@@ -2,7 +2,7 @@ import React from 'react'
 
 type StatusProps = {
     status: "Success" | "Error" | "Loading" ;
-    data: string;
+    data?: string;
 }
 const Status = (props: StatusProps) => {
   return (
