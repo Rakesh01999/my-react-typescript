@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Container from "./components/Container";
 import Teacher from "./components/Teacher";
+import Status from "./components/Status";
 
 const App: React.FC = () => {
   const teacherList = [
@@ -18,12 +19,17 @@ const App: React.FC = () => {
       firstName: "Nasim",
       lastName: "Sir",
     },
-  ]
+  ];
   return (
     // <div className="App">App</div>
     <div className="App">
-      <Container name="Rakesh Biswas" message={15}  isLogged={false}/>
-      <Teacher teacherList={teacherList} />
+      <Status status="Success" data="Rakesh" />
+      <Container name="Rakesh Biswas" message={15} isLogged={true} />
+      <br />
+      <h1>Your Teacher's Name :</h1>
+      <i>
+        <Teacher teacherList={teacherList} />
+      </i>
     </div>
   );
 };
