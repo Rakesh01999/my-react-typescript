@@ -5,6 +5,7 @@ import Container from "./components/Container";
 import Teacher from "./components/Teacher";
 import Status from "./components/Status";
 import StatusContainer from "./components/StatusContainer";
+import Parent from "./components/Parent";
 
 const App: React.FC = () => {
   const teacherList = [
@@ -33,7 +34,16 @@ const App: React.FC = () => {
         <Teacher teacherList={teacherList} />
       </i>
       <br />
-      <StatusContainer > This is a container</StatusContainer>
+      {/* <StatusContainer> This is a container</StatusContainer> */}
+      <Parent>
+        <StatusContainer> This is a container</StatusContainer>
+      </Parent>
+
+      {/* <StatusContainer>
+        <Parent> This is a container</Parent>    // not functionable
+      </StatusContainer> */}
+
+      
     </div>
   );
 };

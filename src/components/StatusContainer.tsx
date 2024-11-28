@@ -1,9 +1,9 @@
 import React from "react";
 
-type statusProps = {
+type statusContainerProps = {
   children: string;
 };
-const StatusContainer : React.FC<statusProps> = ({children}) => {
+const StatusContainer : React.FC<statusContainerProps> = ({children}) => {
   return <div>{children}</div>;
 };
 
