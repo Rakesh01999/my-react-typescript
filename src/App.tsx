@@ -6,6 +6,8 @@ import Teacher from "./components/Teacher";
 import Status from "./components/Status";
 import StatusContainer from "./components/StatusContainer";
 import Parent from "./components/Parent";
+import Button from "./components/Button";
+import { idText } from "typescript";
 
 const App: React.FC = () => {
   const teacherList = [
@@ -43,7 +45,7 @@ const App: React.FC = () => {
         <Parent> This is a container</Parent>    // not functionable
       </StatusContainer> */}
 
-      
+      <Button handleClick={(event, id) => console.log('Clicked !', event, idText)} />
     </div>
   );
 };
