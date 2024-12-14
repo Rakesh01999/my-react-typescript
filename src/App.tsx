@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Container from "./components/Container";
@@ -8,8 +8,13 @@ import StatusContainer from "./components/StatusContainer";
 import Parent from "./components/Parent";
 import Button from "./components/Button";
 import { idText } from "typescript";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
 
-const App: React.FC = () => {
+// const App: React.FC = () => {
+const App: React.FC<{ children?: ReactNode }> = ({ children }) => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const teacherList = [
     {
       firstName: "Jubayer",
@@ -24,28 +29,37 @@ const App: React.FC = () => {
       lastName: "Sir",
     },
   ];
+
   return (
-    // <div className="App">App</div>
-    <div className="App">
-      {/* <Status status="Success" data="Rakesh" /> */}
-      <Status status="Success" />
-      <Container name="Rakesh Biswas" message={15} isLogged={true} />
-      <br />
-      <h1>Your Teacher's Name :</h1>
-      <i>
-        <Teacher teacherList={teacherList} />
-      </i>
-      <br />
-      {/* <StatusContainer> This is a container</StatusContainer> */}
-      <Parent>
-        <StatusContainer> This is a container</StatusContainer>
-      </Parent>
+    <div className="bg-gray-400 text-black">
+      {/* <div className="dark:bg-boxdark-2 dark:text-bodydark"> */}
 
-      {/* <StatusContainer>
-        <Parent> This is a container</Parent>    // not functionable
-      </StatusContainer> */}
+      {/* <!-- ===== Page Wrapper Start ===== --> */}
+      <div className="flex h-screen overflow-hidden">
+        {/* <!-- ===== Sidebar Start ===== --> */}
+        <Sidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+        {/* <!-- ===== Sidebar End ===== --> */}
 
-      <Button handleClick={(event, id) => console.log('Clicked !', event, idText)} />
+        {/* <!-- ===== Content Area Start ===== --> */}
+        <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+          {/* <!-- ===== Header Start ===== --> */}
+          <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+          {/* <!-- ===== Header End ===== --> */}
+
+          {/* <!-- ===== Main Content Start ===== --> */}
+          <main>
+            <div className="mx-auto max-w-screen-2xl p-4 md:p-6 2xl:p-10">
+              {children}
+            </div>
+            <div className="text-center">
+              <h1 className="text-3xl font-bold">Rakesh</h1>
+            </div>
+          </main>
+          {/* <!-- ===== Main Content End ===== --> */}
+        </div>
+        {/* <!-- ===== Content Area End ===== --> */}
+      </div>
+      {/* <!-- ===== Page Wrapper End ===== --> */}
     </div>
   );
 };
