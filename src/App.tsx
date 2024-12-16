@@ -31,9 +31,8 @@ const App: React.FC<{ children?: ReactNode }> = ({ children }) => {
   ];
 
   return (
-    <div className="bg-gray-400 text-black">
-      {/* <div className="dark:bg-boxdark-2 dark:text-bodydark"> */}
-
+    // <div className="bg-gray-400 text-black">
+    <div className="dark:bg-boxdark-2 dark:text-bodydark">
       {/* <!-- ===== Page Wrapper Start ===== --> */}
       <div className="flex h-screen overflow-hidden">
         {/* <!-- ===== Sidebar Start ===== --> */}
@@ -52,7 +51,8 @@ const App: React.FC<{ children?: ReactNode }> = ({ children }) => {
               {children}
             </div>
             <div className="text-center">
-              <h1 className="text-3xl font-bold">Rakesh</h1>
+              <h1 className="text-3xl font-bold">Content Here</h1>
+              <h1 className="text-3xl font-extrabold">Texts</h1>
             </div>
           </main>
           {/* <!-- ===== Main Content End ===== --> */}

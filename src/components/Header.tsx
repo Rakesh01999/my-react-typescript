@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import DropdownUser from "./DropdownUser";
+import DarkModeSwitcher from "./DarkModeSwitcher";
 // import DropdownMessage from './DropdownMessage';
 // import DropdownNotification from './DropdownNotification';
 // import DropdownUser from './DropdownUser';
@@ -101,7 +103,7 @@ const Header = (props: {
         <div className="flex items-center gap-3 2xsm:gap-7">
           <ul className="flex items-center gap-2 2xsm:gap-4">
             {/* <!-- Dark Mode Toggler --> */}
-            {/* <DarkModeSwitcher /> */}
+            <DarkModeSwitcher />
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Notification Menu Area --> */}
@@ -114,14 +116,14 @@ const Header = (props: {
           </ul>
 
           {/* <!-- User Area --> */}
-          {/* <DropdownUser /> */}
+          <DropdownUser />
           {/* <!-- User Area --> */}
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <h1 className="text-2xl text-red-600 font-serif font-extrabold bg-green-400">Rakesh</h1>
-      </div>
+      </div> */}
       
     </header>
   );
