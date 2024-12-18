@@ -269,6 +269,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 }}
               </SidebarLinkGroup>
               {/* <!-- Menu Item Products --> */}
+
               {/* <!-- Menu Item Forms --> */}
               {/* <!-- Scan Barcode --> */}
               <SidebarLinkGroup
@@ -407,11 +408,10 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
 
               {/* <!-- Menu Item Profile --> */}
               {/* <!-- Menu Item Users --> */}
-
               <SidebarLinkGroup
                 activeCondition={
-                  // pathname === "/forms" || pathname.includes("forms")
-                  pathname === "/users" || pathname.includes("users")
+                  pathname === "/forms" || pathname.includes("forms")
+                  // pathname === "/users" || pathname.includes("users")
                 }
               >
                 {(handleClick, open) => {
