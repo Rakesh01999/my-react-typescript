@@ -51,7 +51,7 @@ const App: React.FC<{ children?: ReactNode }> = ({ children }) => {
               {children}
             </div>
             <div className="text-center">
-              <h1 className="text-3xl font-bold">Contents Here</h1>
+              <h1 className="text-3xl font-bold">Contents</h1>
               <h1 className="text-3xl font-extrabold">Texts</h1>
               <h1 className="text-3xl font-extrabold text-green-600">Developed By Rakesh</h1>
             </div>
