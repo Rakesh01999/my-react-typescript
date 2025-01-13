@@ -1,4 +1,4 @@
-## This project is mainly built 
+## This project is mainly built for with Typescript, React , Tailwind CSS, Daisy UI  
 
 # Getting Started with Create React App
 
