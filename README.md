@@ -1,5 +1,6 @@
 ## This project is mainly built with Typescript, React , Tailwind CSS, Daisy UI  
 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
