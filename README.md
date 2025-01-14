@@ -1,5 +1,7 @@
 ## This project is mainly built with Typescript, React , Tailwind CSS, Daisy UI  
 
+* Also "TailAdmin" implemented here
+  
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
