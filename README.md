@@ -1,5 +1,6 @@
 ## This project is mainly built with Typescript, React , Tailwind CSS, Daisy UI  
 
+
 * Also "TailAdmin" implemented here
   
 # Getting Started with Create React App
